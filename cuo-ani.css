@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+}
+.container{
+    height: 100VH;
+    background-color: rgb(68, 108, 108)
+    ;
+    width: 100%;    
+}
+.cup{
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 25rem;
+    background-color: #fff;
+    height: 23rem;
+    border-radius:  0 0 50%  50%;
+    box-shadow: 0px 2px 12px rgb(15, 8, 8);
+
+/* position: relative; */
+}
+.circle{
+    
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width:100%;
+    height: 5rem;
+border-radius: 50%;
+background-color: #fff;
+z-index: 3;
+border: 2px solid gray;
+}
+.dandi{
+    position: absolute;
+    right:-60px;
+    top: 20px;
+    width: 15rem;
+    height: 10rem;
+    border: 20px solid rgb(255, 255, 255);
+    border-top: 20px solid transparent;
+    border-left:20px solid transparent;
+    border-radius: 110%;
+    transform: rotate(-57deg);
+}
+.plate{
+position: absolute;
+top: 60%;
+left: 50%;
+transform: translate(-50%,-50%);
+width: 50rem;
+height: 14rem;
+border-radius: 50%;
+border: 2px solid rgb(73, 72, 72);
+background-color: rgb(242, 227, 227);
+}
+.pcircle{
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    width: 70%;
+    height: 60%;
+    background-color:rgb(187, 180, 180);
+    border-radius: 50%;
+    z-index: -1;
+}
+.coffee{
+    position: absolute;
+    top: 6px;
+    left: 2px;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(238, 152, 46);
+    width: 98%;
+    height: 4rem;
+    border-radius: 50%;
+box-shadow:  0 0 5px tan;
+}
+span{
+    width: 5rem;
+    height: 5rem;
+    background-color: rgba(251, 251, 251, 0.145);
+    position: absolute;
+right: 0;
+top:80%;
+left: calc((var(--n) - 1)*20%);
+border-radius: 110px;
+animation: vapour ease infinite normal none;
+animation-duration: calc((var(--t) - 1)*6s);
+animation-delay:  calc((var(--d) - 1) * 2s);
+}
+span:nth-child(1){
+    --n:1;
+    --t:1;
+    --d:1;
+}
+span:nth-child(2){
+    --n:2 ;
+    --t:2;
+    --d:2;
+}
+span:nth-child(3){
+    --n:3;
+    --t:3;
+    --d:3;
+}
+span:nth-child(4){
+    --n:4;
+    --t:4;
+    --d:4;
+}
+
+@keyframes vapour {
+    from{
+        transform: translate(0);
+    }
+    to{
+transform: translateY(-500%) scale(4);
+opacity: 0;
+    }
+    
+}
